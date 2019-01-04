@@ -202,7 +202,7 @@
             <div class="section">
               
                 <h1 id="modulo-stores-readfilejs">Módulo: stores-readFile.js</h1>
-<p>En este módulo se encuentran las funciones de JavaScript y jQuery que permiten leer un archivo CSV y enviarlo por POST al controlador del módulo <a href="/stores/views/#clase-storesview">stores</a> que permite agregar un inventario a la BD.</p>
+<p>En este módulo se encuentran las funciones de JavaScript y jQuery que permiten leer un archivo CSV y enviarlo por POST al controlador del módulo <a href="../../../stores/views/#clase-storesview">stores</a> que permite agregar un inventario a la BD.</p>
 <p><strong>Autores</strong></p>
 <ul>
 <li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
@@ -212,7 +212,7 @@
 <pre><code>function checkData(data) -&gt; bool
 </code></pre>
 <h4 id="readcsv">readCSV:</h4>
-<p>Función que obtiene el valor del archivo escrito en <em>#fileName</em>, revisa que sea CSV, lee el archivo con el módulo <em>FileReader</em> de JavaScript, convierte a objeto JSON con el módulo <em>csv.toObjects</em> de jQuery.CSV, revisa las columnas con <a href="#checkdata">checkData</a> y envía el objeto en forma de <em>String</em> al controlador del módulo <a href="/stores/views/#clase-storesview">stores</a> a través de una petición POST.</p>
+<p>Función que obtiene el valor del archivo escrito en <em>#fileName</em>, revisa que sea CSV, lee el archivo con el módulo <em>FileReader</em> de JavaScript, convierte a objeto JSON con el módulo <em>csv.toObjects</em> de jQuery.CSV, revisa las columnas con <a href="#checkdata">checkData</a> y envía el objeto en forma de <em>String</em> al controlador del módulo <a href="../../../stores/views/#clase-storesview">stores</a> a través de una petición POST.</p>
 <pre><code>function readCSV() -&gt; HTML: asigna variable "#csv" y envia formulario "#Login"
 </code></pre>
               

@@ -231,7 +231,7 @@ La función post se llama cuando se recibe una petición POST, en este caso, cua
 <h2 id="controlador-de-la-vista-publica-de-busqueda">Controlador de la vista pública de búsqueda</h2>
 <h4 id="clase-homeview">Clase HomeView:</h4>
 <p>Clase que hereda de TemplateView del módulo <em>views.generic</em> de Django. Define las acciones a realizar cuando se accede a la página de inicio y de búsqueda.<br>
-Hasta ahora, todo el trabajo de la página de inicio se encuentra del lado del cliente, puede conseguir más información en <a href="/stores/templates/#indexhtml">templates</a>.</p>
+Hasta ahora, todo el trabajo de la página de inicio se encuentra del lado del cliente, puede conseguir más información en <a href="../../stores/templates/#indexhtml">templates</a>.</p>
 <pre><code>class HomeView(TemplateView):
     def get(self, request):
         return render(request, 'index.html', {})

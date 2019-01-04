@@ -229,9 +229,9 @@ Función reemplazada por <a href="#buscatwitter">buscaTwitter</a>, que se basa e
 <h4 id="buscatwitter">buscaTwitter:</h4>
 <p><strong>Versión 2.0</strong><br>
 Función que busca los Tweets asociados a una medicina y todos sus equivalentes en la BD.<br>
-Si consigue Tweets en la BD, revisa si el Tweet más reciente fue buscado hace menos tiempo que los minutos definidos en la variable del módulo de configuración <a href="/buscaMedServer/buscaMedServer/#settingspy">"TWEET_UPDATE"</a>.<br>
-Si fue buscado hace menos tiempo que dichos minutos, devuelve el query de la BD. En caso contrario, utiliza la función <a href="/classifier/classifier/#threadingtweets">threadingTweets</a> del módulo <em>classifier</em> para buscar y clasificar Tweets a partir del id mas reciente de los Tweets en la BD.<br>
-Si no consigue Tweets en la BD, realiza la búsqueda con la función <a href="/classifier/classifier/#threadingtweets">threadingTweets</a> mencionada previamente.<br>
+Si consigue Tweets en la BD, revisa si el Tweet más reciente fue buscado hace menos tiempo que los minutos definidos en la variable del módulo de configuración <a href="../../buscaMedServer/buscaMedServer/#settingspy">"TWEET_UPDATE"</a>.<br>
+Si fue buscado hace menos tiempo que dichos minutos, devuelve el query de la BD. En caso contrario, utiliza la función <a href="../../classifier/classifier/#threadingtweets">threadingTweets</a> del módulo <em>classifier</em> para buscar y clasificar Tweets a partir del id mas reciente de los Tweets en la BD.<br>
+Si no consigue Tweets en la BD, realiza la búsqueda con la función <a href="../../classifier/classifier/#threadingtweets">threadingTweets</a> mencionada previamente.<br>
 Recibe el nombre de una medicina, y devuelve una lista de Tweets y un booleano que define si se consiguió la medicina.</p>
 <pre><code>def buscaTwitter(medName) -&gt; (QuerySet&lt;Tweet&gt;, bool)
 </code></pre>
@@ -250,7 +250,7 @@ Función que busca el componente activo de un medicamento en los inventarios de 
 <h4 id="clase-tweetviewset">Clase TweetViewSet:</h4>
 <p><strong>Versión 2.0</strong><br>
 Clase que hereda de viewsets.ReadOnlyModelViewSet del módulo <em>viewsets</em> del Django Rest Framework. Define la tabla de la BD que mostrará y el serializador que convertira las filas de la tabla en JSON.<br>
-La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la función buscaTwitter y el serializador <a href="/rest/serializers/#clase-tweetserializer">TweetSerializer</a>.</p>
+La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la función buscaTwitter y el serializador <a href="../../rest/serializers/#clase-tweetserializer">TweetSerializer</a>.</p>
 <pre><code>class TweetViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Tweet.objects.all()
     serializer_class = TweetSerializer
@@ -262,7 +262,7 @@ La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la funci
 <h4 id="clase-storesviewset">Clase StoresViewSet:</h4>
 <p><strong>Versión 2.0</strong><br>
 Clase que hereda de viewsets.ReadOnlyModelViewSet del módulo <em>viewsets</em> del Django Rest Framework. Define la tabla de la BD que mostrará y el serializador que convertira las filas de la tabla en JSON.<br>
-La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la función <a href="#retrieveinventory">retrieveInventory</a> y el serializador <a href="/stores/serializers/#clase-inventoryserializer">InventorySerializer</a>.</p>
+La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la función <a href="#retrieveinventory">retrieveInventory</a> y el serializador <a href="../../stores/serializers/#clase-inventoryserializer">InventorySerializer</a>.</p>
 <pre><code>class StoresViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = store.ProductosPorTienda.objects.all()
     serializer_class = storeSerializers.InventorySerializer
@@ -273,7 +273,7 @@ La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la funci
 </code></pre>
 <h4 id="clase-webviewset">Clase WebViewSet:</h4>
 <p><strong>Versión 2.0</strong><br>
-Clase que hereda de viewsets.ViewSet del módulo <em>viewsets</em> del Django Rest Framework. No necesita definir una tabla en la BD ni un seralizador, porque las herramientas del módulo <a href="/webcrawler/webcrawler/">WebCrawler</a> ya devuelven un objeto compatible con JSON.<br>
+Clase que hereda de viewsets.ViewSet del módulo <em>viewsets</em> del Django Rest Framework. No necesita definir una tabla en la BD ni un seralizador, porque las herramientas del módulo <a href="../../webcrawler/webcrawler/">WebCrawler</a> ya devuelven un objeto compatible con JSON.<br>
 La función <em>list()</em> realiza las búsquedas, las concatena y las devuelve en la respuesta.</p>
 <pre><code>class WebViewSet(viewsets.ViewSet):
     def list(self, request):
