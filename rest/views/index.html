@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>views.py - BuscaMed Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "views.py";
+    var mkdocs_page_input_path = "rest/views.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BuscaMed Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Inicio</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../buscaMedServer/buscaMedServer/">BuscaMedServer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../classifier/classifier/">Classifier</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Rest</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../commands/">management/commands</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../models/">models.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../serializers/">serializers.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../urls/">urls.py</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">views.py</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#modulo-rest-views">Módulo: rest-views</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#funciones-auxiliares-rest-tweets">Funciones Auxiliares REST Tweets</a></li>
+        
+            <li><a class="toctree-l4" href="#funciones-auxiliares-rest-stores">Funciones Auxiliares REST Stores</a></li>
+        
+            <li><a class="toctree-l4" href="#controladores-de-las-vistas">Controladores de las Vistas</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Stores</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../stores/commands/">management/commands</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/models/">models.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/serializers/">serializers.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/templates/">templates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/urls/">urls.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/views/">views.py</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">static/js</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../stores/js/homeSearch/">homeSearch</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../stores/js/readFile/">readFile</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../webcrawler/webcrawler/">Webcrawler</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about/">About</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BuscaMed Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Rest &raquo;</li>
+        
+      
+    
+    <li>views.py</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="modulo-rest-views">Módulo: rest-views</h1>
+<p>En este módulo se definen los controladores de las vistas de acceso al módulo REST utilizando el módulo <em>viewsets</em> del Django Rest Framework.</p>
+<p><strong>Autores</strong></p>
+<ul>
+<li>Version 1.0: Antonio Cipagauta, 05-38040 | Douglas Torres, 11-11027</li>
+<li>Version 2.0: Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
+</ul>
+<h2 id="funciones-auxiliares-rest-tweets">Funciones Auxiliares REST Tweets</h2>
+<h4 id="searchdatabase">searchDataBase:</h4>
+<p><strong>Versión 1.0</strong>
+Función que verifica que la medicina buscada por el usuario se encuentra en la base de datos y busca las medicinas equivalentes. Recibe el nombre de la medicina y devuelve componente activo, lista de equivalentes y un booleano que representa la existencia de un error.</p>
+<pre><code>def searchDataBase(medName) -&gt; (Activo, QuerySet&lt;Medicina&gt;, bool)
+</code></pre>
+<h4 id="retrievetweets">retrieveTweets:</h4>
+<p><strong>Versión 1.0</strong>
+Función que busca por cada Medicina en listaMedicinas los tweets asociados en la BD.</p>
+<p><strong>Versión 2.0</strong>
+Filtra por tweets no expirados y ordena por fecha en orden decreciente. Devuelve la lista de Tweets encontrados.</p>
+<pre><code>def retrieveTweets(listaMedicinas) -&gt; QuerySet&lt;Tweet&gt;
+</code></pre>
+<h4 id="buscatweets">buscaTweets:</h4>
+<p><strong>Versión 1.0</strong>
+Función que busca los tweets asociados a una medicina y todos sus equivalentes en la BD. Utiliza la función <a href="#searchdatabase">searchDataBase</a> para encontrar los equivalentes a la medicina ingresada. Utiliza la función <a href="#retrievetweets">retrieveTweets</a> para buscar los Tweets de la lista de medicinas obtenida por searchDataBase. Recibe el nombre de una medicina y devuelve la lista de Tweets.</p>
+<p><strong>Versión 2.0</strong>
+Función reemplazada por <a href="#buscatwitter">buscaTwitter</a>, que se basa en esta para buscar en la BD.</p>
+<pre><code>def buscaTweets(medName) -&gt; QuerySet&lt;Tweet&gt;
+</code></pre>
+<h4 id="buscatwitter">buscaTwitter:</h4>
+<p><strong>Versión 2.0</strong><br>
+Función que busca los Tweets asociados a una medicina y todos sus equivalentes en la BD.<br>
+Si consigue Tweets en la BD, revisa si el Tweet más reciente fue buscado hace menos tiempo que los minutos definidos en la variable del módulo de configuración <a href="/buscaMedServer/buscaMedServer/#settingspy">"TWEET_UPDATE"</a>.<br>
+Si fue buscado hace menos tiempo que dichos minutos, devuelve el query de la BD. En caso contrario, utiliza la función <a href="/classifier/classifier/#threadingtweets">threadingTweets</a> del módulo <em>classifier</em> para buscar y clasificar Tweets a partir del id mas reciente de los Tweets en la BD.<br>
+Si no consigue Tweets en la BD, realiza la búsqueda con la función <a href="/classifier/classifier/#threadingtweets">threadingTweets</a> mencionada previamente.<br>
+Recibe el nombre de una medicina, y devuelve una lista de Tweets y un booleano que define si se consiguió la medicina.</p>
+<pre><code>def buscaTwitter(medName) -&gt; (QuerySet&lt;Tweet&gt;, bool)
+</code></pre>
+<h2 id="funciones-auxiliares-rest-stores">Funciones Auxiliares REST Stores</h2>
+<h4 id="getcomponent">getComponent:</h4>
+<p><strong>Versión 2.0</strong><br>
+Función que busca el componente activo de un medicamento dado. Recibe el nombre de la medicina y devuelve una lista con un objeto Activo.</p>
+<pre><code>def getComponent(medName) -&gt; QuerySet&lt;Activo&gt;
+</code></pre>
+<h4 id="retrieveinventory">retrieveInventory:</h4>
+<p><strong>Versión 2.0</strong><br>
+Función que busca el componente activo de un medicamento en los inventarios de las farmacias asociadas. Para conseguir el componente activo, utiliza la función <a href="#getcomponent">getComponent</a>. Recibe el nombre de una medicina y devuelve una lista de los productos por tienda.</p>
+<pre><code>def retrieveInventory(medName) -&gt; QuerySet&lt;ProductosPorTienda&gt;
+</code></pre>
+<h2 id="controladores-de-las-vistas">Controladores de las Vistas</h2>
+<h4 id="clase-tweetviewset">Clase TweetViewSet:</h4>
+<p><strong>Versión 2.0</strong><br>
+Clase que hereda de viewsets.ReadOnlyModelViewSet del módulo <em>viewsets</em> del Django Rest Framework. Define la tabla de la BD que mostrará y el serializador que convertira las filas de la tabla en JSON.<br>
+La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la función buscaTwitter y el serializador <a href="/rest/serializers/#clase-tweetserializer">TweetSerializer</a>.</p>
+<pre><code>class TweetViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Tweet.objects.all()
+    serializer_class = TweetSerializer
+
+    def list(self, request, pk=None):
+        ...
+        return Response(queryset)
+</code></pre>
+<h4 id="clase-storesviewset">Clase StoresViewSet:</h4>
+<p><strong>Versión 2.0</strong><br>
+Clase que hereda de viewsets.ReadOnlyModelViewSet del módulo <em>viewsets</em> del Django Rest Framework. Define la tabla de la BD que mostrará y el serializador que convertira las filas de la tabla en JSON.<br>
+La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la función <a href="#retrieveinventory">retrieveInventory</a> y el serializador <a href="/stores/serializers/#clase-inventoryserializer">InventorySerializer</a>.</p>
+<pre><code>class StoresViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = store.ProductosPorTienda.objects.all()
+    serializer_class = storeSerializers.InventorySerializer
+
+    def list(self, request, pk=None):
+        ...
+        return Response(queryset)
+</code></pre>
+<h4 id="clase-webviewset">Clase WebViewSet:</h4>
+<p><strong>Versión 2.0</strong><br>
+Clase que hereda de viewsets.ViewSet del módulo <em>viewsets</em> del Django Rest Framework. No necesita definir una tabla en la BD ni un seralizador, porque las herramientas del módulo <a href="/webcrawler/webcrawler/">WebCrawler</a> ya devuelven un objeto compatible con JSON.<br>
+La función <em>list()</em> realiza las búsquedas, las concatena y las devuelve en la respuesta.</p>
+<pre><code>class WebViewSet(viewsets.ViewSet):
+    def list(self, request):
+        ...
+        return Response(queryset)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../stores/commands/" class="btn btn-neutral float-right" title="management/commands">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../urls/" class="btn btn-neutral" title="urls.py"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../urls/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../stores/commands/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

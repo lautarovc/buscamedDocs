@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>views.py - BuscaMed Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "views.py";
+    var mkdocs_page_input_path = "stores/views.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BuscaMed Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Inicio</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../buscaMedServer/buscaMedServer/">BuscaMedServer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../classifier/classifier/">Classifier</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Rest</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../rest/commands/">management/commands</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/models/">models.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/serializers/">serializers.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/urls/">urls.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/views/">views.py</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Stores</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../commands/">management/commands</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../models/">models.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../serializers/">serializers.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../templates/">templates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../urls/">urls.py</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">views.py</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#modulo-stores-views">Módulo: stores-views</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#controladores-para-vistas-de-farmacias-adscritas">Controladores para vistas de farmacias adscritas</a></li>
+        
+            <li><a class="toctree-l4" href="#controlador-de-la-vista-publica-de-busqueda">Controlador de la vista pública de búsqueda</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">static/js</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../js/homeSearch/">homeSearch</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../js/readFile/">readFile</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../webcrawler/webcrawler/">Webcrawler</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about/">About</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BuscaMed Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Stores &raquo;</li>
+        
+      
+    
+    <li>views.py</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="modulo-stores-views">Módulo: stores-views</h1>
+<p>En este módulo se definen los controladores de las vistas para el módulo de la aplicación web utilizando el módulo <em>viewsets</em> del Django Rest Framework.</p>
+<p><strong>Autores</strong></p>
+<ul>
+<li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
+</ul>
+<h2 id="controladores-para-vistas-de-farmacias-adscritas">Controladores para vistas de farmacias adscritas</h2>
+<h4 id="clase-loginview">Clase LoginView:</h4>
+<p>Clase que hereda de LoginView del módulo <em>auth.views</em> de Django. Define el formulario de Django a utilizar para renderizar en el archivo html correspondiente (templates/registration/login.html).</p>
+<p>En el archivo <em>stores/forms.py</em> se definen las características que se esperan renderizar del formulario de inicio de sesión de la siguiente manera:</p>
+<pre><code>class LoginForm(AuthenticationForm):
+    username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control', 'id':'inputEmail', 'placeholder':'Nombre de usuario'}))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control', 'id':'inputPassword', 'placeholder':'Contraseña'}))
+</code></pre>
+<p>Esto se asigna en la clase del controlador de la siguiente manera:</p>
+<pre><code>class UserLoginView(LoginView):
+    form_class = LoginForm
+</code></pre>
+<h4 id="clase-storesview">Clase StoresView:</h4>
+<p>Clase que hereda de TemplateView del módulo <em>views.generic</em> de Django. Define las acciones a realizar cuando se accede a la página de lectura de archivo CSV del inventario para farmacias adscritas.</p>
+<p>La función get se llama cuando se recibe una petición GET, en este caso, cuando no se envía un inventario.<br>
+La función post se llama cuando se recibe una petición POST, en este caso, cuando se envía un inventario.</p>
+<p><em>Nótese</em> que cuando se accede por get, la variable success es renderizada con el valor -1, esto para que no se muestre ningun mensaje al usuario. Cuando se accede por post y el archivo es cargado con éxito, la variable success es renderizada con el valor 1, para mostrar un mensaje de carga exitosa. De la misma manera, si hay un error, se renderizará con valor 0 para mostrar un mensaje de error.</p>
+<pre><code>class StoresView(TemplateView):
+    def get(self, request):
+        ...
+        return render(request, 'readFile.html', {'success': -1})
+    def post(self, request):
+        ...
+        return render(request, 'readFile.html', {'success': 1})
+</code></pre>
+<h2 id="controlador-de-la-vista-publica-de-busqueda">Controlador de la vista pública de búsqueda</h2>
+<h4 id="clase-homeview">Clase HomeView:</h4>
+<p>Clase que hereda de TemplateView del módulo <em>views.generic</em> de Django. Define las acciones a realizar cuando se accede a la página de inicio y de búsqueda.<br>
+Hasta ahora, todo el trabajo de la página de inicio se encuentra del lado del cliente, puede conseguir más información en <a href="/stores/templates/#indexhtml">templates</a>.</p>
+<pre><code>class HomeView(TemplateView):
+    def get(self, request):
+        return render(request, 'index.html', {})
+    def post(self, request):
+        return render(request, 'index.html', {})
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../js/homeSearch/" class="btn btn-neutral float-right" title="homeSearch">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../urls/" class="btn btn-neutral" title="urls.py"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../urls/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../js/homeSearch/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

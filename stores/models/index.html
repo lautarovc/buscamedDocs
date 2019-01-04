@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>models.py - BuscaMed Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "models.py";
+    var mkdocs_page_input_path = "stores/models.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BuscaMed Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Inicio</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../buscaMedServer/buscaMedServer/">BuscaMedServer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../classifier/classifier/">Classifier</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Rest</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../rest/commands/">management/commands</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/models/">models.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/serializers/">serializers.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/urls/">urls.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/views/">views.py</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Stores</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../commands/">management/commands</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">models.py</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#modulo-stores-models">Módulo: stores-models</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#clase-activo">Clase Activo:</a></li>
+        
+            <li><a class="toctree-l4" href="#clase-medicina">Clase Medicina:</a></li>
+        
+            <li><a class="toctree-l4" href="#clase-presentacion">Clase Presentacion:</a></li>
+        
+            <li><a class="toctree-l4" href="#clase-productosportienda">Clase ProductosPorTienda:</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../serializers/">serializers.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../templates/">templates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../urls/">urls.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../views/">views.py</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">static/js</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../js/homeSearch/">homeSearch</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../js/readFile/">readFile</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../webcrawler/webcrawler/">Webcrawler</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about/">About</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BuscaMed Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Stores &raquo;</li>
+        
+      
+    
+    <li>models.py</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="modulo-stores-models">Módulo: stores-models</h1>
+<p>En este módulo se encuentra definida la estructura de la base de datos para los inventarios de farmacias adscritas en un modelo orientado a objetos utilizando el Django ORM original.</p>
+<p><strong>Autores</strong></p>
+<ul>
+<li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
+</ul>
+<h4 id="clase-activo">Clase Activo:</h4>
+<p>Guarda cada componente activo sin repeticiones.</p>
+<pre><code>class Activo(models.Model):
+    componente = models.TextField(verbose_name=('Componente activo'),unique=True)
+</code></pre>
+<h4 id="clase-medicina">Clase Medicina:</h4>
+<p>Guarda cada medicina asociada a un componente activo.</p>
+<pre><code>class Medicina(models.Model):
+    nombre = models.TextField(verbose_name=('Nombre de marca'))
+    activo = models.ForeignKey(Activo, related_name='componente-activo+', null=True, on_delete=models.CASCADE)
+</code></pre>
+<h4 id="clase-presentacion">Clase Presentacion:</h4>
+<p>Guarda la presentación asociada a una medicina.</p>
+<pre><code>class Presentacion(models.Model):
+    presentacion = models.TextField(verbose_name=('Presentacion'))
+    medicina = models.ForeignKey(Medicina, related_name='formato',null=True, on_delete=models.CASCADE)
+</code></pre>
+<h4 id="clase-productosportienda">Clase ProductosPorTienda:</h4>
+<p>Asocia cada presentación de un producto con una tienda, su disponibilidad y su fecha de ingreso del dato. Esta tabla permite representar el inventario de cada tienda.</p>
+<pre><code>class ProductosPorTienda(models.Model):
+    producto = models.ForeignKey(Presentacion, related_name='med', null=True, on_delete=models.CASCADE)
+    tienda = models.ForeignKey(User, related_name='tienda', null=True, on_delete=models.CASCADE)
+    disponibilidad = models.IntegerField(verbose_name=('Disponibilidad'))
+    fechaDeIngreso = models.DateTimeField(verbose_name=('Fecha de actualizacion'), auto_now_add=True, blank=True)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../serializers/" class="btn btn-neutral float-right" title="serializers.py">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../commands/" class="btn btn-neutral" title="management/commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../commands/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../serializers/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

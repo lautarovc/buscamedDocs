@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Webcrawler - BuscaMed Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Webcrawler";
+    var mkdocs_page_input_path = "webcrawler/webcrawler.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BuscaMed Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Inicio</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../buscaMedServer/buscaMedServer/">BuscaMedServer</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../classifier/classifier/">Classifier</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Rest</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../rest/commands/">management/commands</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/models/">models.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/serializers/">serializers.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/urls/">urls.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/views/">views.py</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Stores</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../stores/commands/">management/commands</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/models/">models.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/serializers/">serializers.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/templates/">templates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/urls/">urls.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/views/">views.py</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">static/js</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../stores/js/homeSearch/">homeSearch</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../stores/js/readFile/">readFile</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Webcrawler</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#modulo-webcrawler">Módulo: webcrawler</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#webcrawlerfarmarketpy">webCrawlerFarmarket.py</a></li>
+        
+            <li><a class="toctree-l3" href="#webcrawlerfullfarmaciapy">webCrawlerFullFarmacia.py</a></li>
+        
+            <li><a class="toctree-l3" href="#webcrawlerfundafarmaciapy">webCrawlerFundafarmacia.py</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about/">About</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BuscaMed Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Webcrawler</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="modulo-webcrawler">Módulo: webcrawler</h1>
+<p>En este módulo se encuentran los webcrawlers que buscan la información de inventario directamente en las páginas web de diferentes farmacias. Utilizan el módulo <em>requests</em> para hacer las peticiones a las páginas y <em>BeautifulSoup</em> para analizar las respuestas HTML en Python.</p>
+<h2 id="webcrawlerfarmarketpy">webCrawlerFarmarket.py</h2>
+<p><strong>Autores</strong></p>
+<ul>
+<li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>Archivo donde se encuentran las funciones que permiten las búsquedas en la página de <strong>Farmarket</strong>.<br>
+Contiene un <em>Main</em> para realizar pruebas directamente.</p>
+<h4 id="webcrawler">webCrawler:</h4>
+<p>Función que hace una petición POST (con timeout=30seg) a la página de <em>Farmarket</em> con la variable 'txtProducto' asignada al valor de la medicina. Luego, la respuesta es analizada por <em>Beautiful Soup</em> y la información de los productos es recolectada por la función <em>collectInfo</em>. </p>
+<pre><code>def webCrawler(medicine): -&gt; List&lt;ProductosPorTienda&gt;
+</code></pre>
+<h4 id="collectinfo">collectInfo:</h4>
+<p>Recibe una lista de los tds (table data) del HTML, obtenida por <em>BeautifulSoup</em>, y de forma personalizada a la estructura de la página de <em>Farmarket</em>, recolecta la información de los productos por tienda en una lista.</p>
+<pre><code>def collectInfo(tds): -&gt; List&lt;ProductosPorTienda&gt;
+</code></pre>
+<h2 id="webcrawlerfullfarmaciapy">webCrawlerFullFarmacia.py</h2>
+<p><strong>Autores</strong></p>
+<ul>
+<li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>Archivo donde se encuentran las funciones que permiten las búsquedas en la página de <strong>FullFarmacia</strong>.<br>
+Contiene un <em>Main</em> para realizar pruebas directamente.</p>
+<h4 id="webcrawler_1">webCrawler:</h4>
+<p>Función que hace una petición GET (con timeout=30seg) a la página de <em>FullFarmacia</em> con la variable 'searchBox' asignada al valor de la medicina. Luego, la respuesta es analizada por <em>Beautiful Soup</em> y la información de los productos es recolectada por la función <em>collectInfo</em>. </p>
+<pre><code>def webCrawler(medicine): -&gt; List&lt;ProductosPorTienda&gt;
+</code></pre>
+<h4 id="collectinfo_1">collectInfo:</h4>
+<p>Recibe una lista de los tds (table data) dentro de 'productContainer' del HTML, obtenida por <em>BeautifulSoup</em>, y de forma personalizada a la estructura de la página de <em>FullFarmacia</em>, recolecta la información de los productos por tienda en una lista.</p>
+<pre><code>def collectInfo(tds): -&gt; List&lt;ProductosPorTienda&gt;
+</code></pre>
+<h2 id="webcrawlerfundafarmaciapy">webCrawlerFundafarmacia.py</h2>
+<p><strong>Autores</strong></p>
+<ul>
+<li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>Archivo donde se encuentran las funciones que permiten las búsquedas en la página de <strong>Fundafarmacia</strong>.<br>
+Contiene un <em>Main</em> para realizar pruebas directamente.</p>
+<h4 id="webcrawler_2">webCrawler:</h4>
+<p>Función que hace una petición POST (con timeout=30seg) a la página de <em>Fundafarmacia</em> con la variable 'producto' asignada al valor de la medicina. Luego, la respuesta es analizada por <em>Beautiful Soup</em> y la información de los productos es recolectada por la función <em>collectInfo</em>. </p>
+<pre><code>def webCrawler(medicine): -&gt; List&lt;ProductosPorTienda&gt;
+</code></pre>
+<h4 id="collectinfo_2">collectInfo:</h4>
+<p>Recibe una lista de los tds (table data) del HTML, obtenida por <em>BeautifulSoup</em>, y de forma personalizada a la estructura de la página de <em>Fundafarmacia</em>, recolecta la información de los productos por tienda en una lista.</p>
+<pre><code>def collectInfo(tds): -&gt; List&lt;ProductosPorTienda&gt;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../stores/js/readFile/" class="btn btn-neutral" title="readFile"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../stores/js/readFile/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

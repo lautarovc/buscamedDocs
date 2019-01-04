@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Classifier - BuscaMed Docs</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Classifier";
+    var mkdocs_page_input_path = "classifier/classifier.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BuscaMed Docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Inicio</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../buscaMedServer/buscaMedServer/">BuscaMedServer</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Classifier</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#modulo-classifier">Módulo: classifier</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#classifierpy">classifier.py</a></li>
+        
+            <li><a class="toctree-l3" href="#trainpy">train.py</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Rest</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../rest/commands/">management/commands</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/models/">models.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/serializers/">serializers.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/urls/">urls.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../rest/views/">views.py</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Stores</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../stores/commands/">management/commands</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/models/">models.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/serializers/">serializers.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/templates/">templates</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/urls/">urls.py</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../stores/views/">views.py</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">static/js</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../stores/js/homeSearch/">homeSearch</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../stores/js/readFile/">readFile</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../webcrawler/webcrawler/">Webcrawler</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../about/">About</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BuscaMed Docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Classifier</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="modulo-classifier">Módulo: classifier</h1>
+<p>En este módulo se encuentran los programas de clasificación y entrenamiento de la máquina clasificadora de tweets. 
+Esta máquina clasifica tweets en <strong>oferta</strong>, <strong>demanda</strong> y <strong>ninguno</strong>. Para usos del <em>BuscaMed Server</em>, solo guardamos los tweets clasificados como <strong>oferta</strong>.</p>
+<h2 id="classifierpy">classifier.py</h2>
+<p><strong>Autores</strong></p>
+<ul>
+<li>Version 1.0: Antonio Cipagauta, 05-38040 | Douglas Torres, 11-11027</li>
+<li>Version 2.0: Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
+<li>Version 2.1: Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>Archivo donde se encuentran tres versiones del clasificador, separadas por comentarios (esto para mantener la retro-compatibilidad y para adoptar, sin cambios, varias cosas de la primera versión en las otras). Este clasificador hace uso de Tweepy para acceder al API de Twitter y realizar las búsquedas de medicinas, para luego clasificar los tweets y guardarlos en la BD.</p>
+<h3 id="version-10">Versión 1.0</h3>
+<h4 id="clase-tweet">Clase Tweet:</h4>
+<p>Utilizada para facilitar la manipulación de los datos obtenidos del API de Twitter</p>
+<pre><code>class Tweet:   
+    def __init__(self, url, text, medicines):
+        self.url = url
+        self.text = text
+        self.medicines = medicines
+
+    def set_cluster(self, cluster):
+
+    def get_id(self):
+</code></pre>
+<h4 id="tweepy_auth">tweepy_auth:</h4>
+<p>Devuelve un objeto api de Tweepy que permite realizar las búsquedas a Twitter. 
+Recibe un diccionario con el siguiente formato:</p>
+<pre><code>keys = [{"consumer_key": "xxxx", "consumer_secret": "xxxx",
+         "access_token": "xxxx", "access_secret": "xxxx"}]
+
+def tweepy_auth(keys) -&gt; tweepy.api
+</code></pre>
+<h4 id="clean">clean:</h4>
+<p>Devuelve un objeto Tweet a partir de un tweet crudo obtenido por el API de Twitter.</p>
+<pre><code>def clean(tweet): -&gt; Tweet
+</code></pre>
+<h4 id="classify">classify:</h4>
+<p>Devuelve un objeto Tweet ya clasificado en <strong>oferta</strong> o <strong>demanda</strong>, a partir de un tweet crudo obtenido por el API de Twitter.</p>
+<pre><code>def classify(raw_tweet): -&gt; Tweet
+</code></pre>
+<h4 id="batchclassify">batchClassify:</h4>
+<p>Busca todas las medicinas conocidas (guardadas en la variable <em>medicines_list</em>) en Twitter, clasifica los tweets y los guarda en la BD.</p>
+<pre><code>def batchClassify(): -&gt; None
+</code></pre>
+<h3 id="version-20">Versión 2.0</h3>
+<h4 id="listartweets">listarTweets:</h4>
+<p>Busca una lista de medicinas dada en Twitter, clasifica los tweets y los guarda en la BD.</p>
+<p><em>Opcional:</em> recibe un id de un tweet para buscar solamente tweets más recientes.</p>
+<pre><code>def listarTweets(medicine_list, from_id=None): -&gt; None
+</code></pre>
+<h3 id="version-21">Versión 2.1</h3>
+<h4 id="clase-listarthread">Clase ListarThread:</h4>
+<p>Utilizada para generar hilos que busquen listas de medicinas concurrentemente en Twitter con diferentes API keys.</p>
+<p><strong>ListarThread.run()</strong> es equivalente a <em>listarTweets()</em>.</p>
+<pre><code>class ListarThread(threading.Thread):
+    def __init__(self, keys, medicine_list, from_id):
+        threading.Thread.__init__(self)
+        self.keys = keys
+        self.medicine_list = medicine_list
+        self.from_id = from_id
+
+    def run(self):
+</code></pre>
+<h4 id="threadingtweets">threadingTweets:</h4>
+<p>Función que recibe una lista de API keys y una lista de medicinas, divide la lista de medicinas entre todas las API keys y crea hilos de <em>ListarThread</em>. Cada hilo tiene una API key y una sublista de medicinas, de esta manera se distribuye la carga de búsqueda entre las API keys.</p>
+<p><em>Opcional:</em> recibe un id de un tweet para buscar solamente tweets más recientes.</p>
+<pre><code>def threadingTweets(keys, medicine_list, from_id=None): -&gt; None
+</code></pre>
+<h2 id="trainpy">train.py</h2>
+<p><strong>Autores</strong></p>
+<ul>
+<li>Version 1.0: Antonio Cipagauta, 05-38040 | Douglas Torres, 11-11027</li>
+</ul>
+<p><strong>Descripción</strong></p>
+<p>Archivo que contiene el programa principal que se encarga de entrenar el modelo utilizado por el clasificador de tweets. </p>
+<p>Los datos de todas las posibles medicinas los obtiene de:</p>
+<pre><code>../data/baseDatos-completa.csv
+</code></pre>
+<p>Los datos clasificados para entrenar los obtiene de:</p>
+<pre><code>../data/tweetsClasificados-3000.csv
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../rest/commands/" class="btn btn-neutral float-right" title="management/commands">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../buscaMedServer/buscaMedServer/" class="btn btn-neutral" title="BuscaMedServer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../buscaMedServer/buscaMedServer/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../rest/commands/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
