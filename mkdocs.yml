@@ -1,0 +1,24 @@
+site_name: BuscaMed Docs
+nav:
+    - Inicio: index.md
+    - BuscaMedServer: buscaMedServer/buscaMedServer.md
+    - Classifier: classifier/classifier.md
+    - Rest:
+        - management/commands: rest/commands.md
+        - models.py: rest/models.md
+        - serializers.py: rest/serializers.md
+        - urls.py: rest/urls.md
+        - views.py: rest/views.md
+    - Stores:
+        - management/commands: stores/commands.md
+        - models.py: stores/models.md
+        - serializers.py: stores/serializers.md
+        - templates: stores/templates.md
+        - urls.py: stores/urls.md
+        - views.py: stores/views.md
+        - static/js:
+            - homeSearch: stores/js/homeSearch.md
+            - readFile: stores/js/readFile.md
+    - Webcrawler: webcrawler/webcrawler.md
+    - About: about.md
+theme: readthedocs
