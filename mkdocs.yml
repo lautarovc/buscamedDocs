@@ -1,4 +1,6 @@
 site_name: BuscaMed Docs
+site_url: https://lautarovc.github.io/buscamedDocs/
+edit_uri: https://lautarovc.github.io/buscamedDocs/
 nav:
     - Inicio: index.md
     - BuscaMedServer: buscaMedServer/buscaMedServer.md

@@ -47,7 +47,7 @@ La función post se llama cuando se recibe una petición POST, en este caso, cua
 #### Clase HomeView:
 
 Clase que hereda de TemplateView del módulo *views.generic* de Django. Define las acciones a realizar cuando se accede a la página de inicio y de búsqueda.<br>
-Hasta ahora, todo el trabajo de la página de inicio se encuentra del lado del cliente, puede conseguir más información en [templates](/stores/templates/#indexhtml).
+Hasta ahora, todo el trabajo de la página de inicio se encuentra del lado del cliente, puede conseguir más información en [templates](../../stores/templates/#indexhtml).
 
 
     class HomeView(TemplateView):

@@ -40,9 +40,9 @@ Función reemplazada por [buscaTwitter](#buscatwitter), que se basa en esta para
 
 **Versión 2.0**<br>
 Función que busca los Tweets asociados a una medicina y todos sus equivalentes en la BD.<br>
-Si consigue Tweets en la BD, revisa si el Tweet más reciente fue buscado hace menos tiempo que los minutos definidos en la variable del módulo de configuración ["TWEET_UPDATE"](/buscaMedServer/buscaMedServer/#settingspy).<br>
-Si fue buscado hace menos tiempo que dichos minutos, devuelve el query de la BD. En caso contrario, utiliza la función [threadingTweets](/classifier/classifier/#threadingtweets) del módulo *classifier* para buscar y clasificar Tweets a partir del id mas reciente de los Tweets en la BD.<br>
-Si no consigue Tweets en la BD, realiza la búsqueda con la función [threadingTweets](/classifier/classifier/#threadingtweets) mencionada previamente.<br>
+Si consigue Tweets en la BD, revisa si el Tweet más reciente fue buscado hace menos tiempo que los minutos definidos en la variable del módulo de configuración ["TWEET_UPDATE"](../../buscaMedServer/buscaMedServer/#settingspy).<br>
+Si fue buscado hace menos tiempo que dichos minutos, devuelve el query de la BD. En caso contrario, utiliza la función [threadingTweets](../../classifier/classifier/#threadingtweets) del módulo *classifier* para buscar y clasificar Tweets a partir del id mas reciente de los Tweets en la BD.<br>
+Si no consigue Tweets en la BD, realiza la búsqueda con la función [threadingTweets](../../classifier/classifier/#threadingtweets) mencionada previamente.<br>
 Recibe el nombre de una medicina, y devuelve una lista de Tweets y un booleano que define si se consiguió la medicina.
 
     def buscaTwitter(medName) -> (QuerySet<Tweet>, bool)
@@ -70,7 +70,7 @@ Función que busca el componente activo de un medicamento en los inventarios de 
 
 **Versión 2.0**<br>
 Clase que hereda de viewsets.ReadOnlyModelViewSet del módulo *viewsets* del Django Rest Framework. Define la tabla de la BD que mostrará y el serializador que convertira las filas de la tabla en JSON.<br>
-La función *list()* define la respuesta JSON a mostrar. Utiliza la función buscaTwitter y el serializador [TweetSerializer](/rest/serializers/#clase-tweetserializer).
+La función *list()* define la respuesta JSON a mostrar. Utiliza la función buscaTwitter y el serializador [TweetSerializer](../../rest/serializers/#clase-tweetserializer).
 
     class TweetViewSet(viewsets.ReadOnlyModelViewSet):
         queryset = Tweet.objects.all()
@@ -84,7 +84,7 @@ La función *list()* define la respuesta JSON a mostrar. Utiliza la función bus
 
 **Versión 2.0**<br>
 Clase que hereda de viewsets.ReadOnlyModelViewSet del módulo *viewsets* del Django Rest Framework. Define la tabla de la BD que mostrará y el serializador que convertira las filas de la tabla en JSON.<br>
-La función *list()* define la respuesta JSON a mostrar. Utiliza la función [retrieveInventory](#retrieveinventory) y el serializador [InventorySerializer](/stores/serializers/#clase-inventoryserializer).
+La función *list()* define la respuesta JSON a mostrar. Utiliza la función [retrieveInventory](#retrieveinventory) y el serializador [InventorySerializer](../../stores/serializers/#clase-inventoryserializer).
 
     class StoresViewSet(viewsets.ReadOnlyModelViewSet):
         queryset = store.ProductosPorTienda.objects.all()
@@ -97,7 +97,7 @@ La función *list()* define la respuesta JSON a mostrar. Utiliza la función [re
 #### Clase WebViewSet:
 
 **Versión 2.0**<br>
-Clase que hereda de viewsets.ViewSet del módulo *viewsets* del Django Rest Framework. No necesita definir una tabla en la BD ni un seralizador, porque las herramientas del módulo [WebCrawler](/webcrawler/webcrawler/) ya devuelven un objeto compatible con JSON.<br>
+Clase que hereda de viewsets.ViewSet del módulo *viewsets* del Django Rest Framework. No necesita definir una tabla en la BD ni un seralizador, porque las herramientas del módulo [WebCrawler](../../webcrawler/webcrawler/) ya devuelven un objeto compatible con JSON.<br>
 La función *list()* realiza las búsquedas, las concatena y las devuelve en la respuesta.
 
     class WebViewSet(viewsets.ViewSet):

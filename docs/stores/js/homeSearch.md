@@ -1,6 +1,6 @@
 # Módulo: stores-homeSearch.js
 
-En este módulo se encuentran las funciones de JavaScript y jQuery que permiten hacer una búsqueda dinámica en la página de inicio, llamando al servidor [REST](/rest/views/).
+En este módulo se encuentran las funciones de JavaScript y jQuery que permiten hacer una búsqueda dinámica en la página de inicio, llamando al servidor [REST](../../../rest/views/).
 
 **Autores**
 
@@ -26,7 +26,7 @@ Hace la búsqueda a partir del valor escrito en *#searchBox* y llama a las funci
 
 #### ajaxBuscamedTweets:
 
-Función que recibe el nombre de una medicina y utiliza el módulo *ajax* de jQuery para hacer un llamado al [controlador de búsqueda en Twitter](/rest/views/#clase-tweetviewset) del servidor REST. Con el resultado, llama a la función [ajaxTwitter](#ajaxtwitter) para incrustar el tweet con el formato de Twittter.
+Función que recibe el nombre de una medicina y utiliza el módulo *ajax* de jQuery para hacer un llamado al [controlador de búsqueda en Twitter](../../../rest/views/#clase-tweetviewset) del servidor REST. Con el resultado, llama a la función [ajaxTwitter](#ajaxtwitter) para incrustar el tweet con el formato de Twittter.
 
     function ajaxBuscamedTweets(med) -> None
 
@@ -38,7 +38,7 @@ Función que recibe el url de un tweet, y utiliza el módulo *ajax* de jQuery pa
 
 #### ajaxBuscamedWeb:
 
-Función que recibe el nombre de una medicina y utiliza el módulo *ajax* de jQuery para hacer un llamado al [controlador de búsqueda en web](/rest/views/#clase-webviewset) del servidor REST. Con el resultado, llama a la función [htmlForWeb](#htmlforweb) para obtener el formato en HTML predeterminado e incrustar el resultado.
+Función que recibe el nombre de una medicina y utiliza el módulo *ajax* de jQuery para hacer un llamado al [controlador de búsqueda en web](../../../rest/views/#clase-webviewset) del servidor REST. Con el resultado, llama a la función [htmlForWeb](#htmlforweb) para obtener el formato en HTML predeterminado e incrustar el resultado.
 
     function ajaxBuscamedWeb(med) -> HTML: inserta resultado en div de farmacias
 
@@ -50,7 +50,7 @@ Función que recibe el objeto obtenido por [ajaxBuscamedWeb](#ajaxbuscamedweb), 
 
 #### ajaxBuscamedStores:
 
-Función que recibe el nombre de una medicina y utiliza el módulo *ajax* de jQuery para hacer un llamado al [controlador de búsqueda en farmacias adscritas](/rest/views/#clase-storesviewset) del servidor REST. Con el resultado, llama a la función [htmlForStores](#htmlforstores) para obtener el formato en HTML predeterminado e incrustar el resultado.
+Función que recibe el nombre de una medicina y utiliza el módulo *ajax* de jQuery para hacer un llamado al [controlador de búsqueda en farmacias adscritas](../../../rest/views/#clase-storesviewset) del servidor REST. Con el resultado, llama a la función [htmlForStores](#htmlforstores) para obtener el formato en HTML predeterminado e incrustar el resultado.
 
     function ajaxBuscamedStores(med) -> HTML: inserta resultado en div de farmacias
 

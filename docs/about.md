@@ -1,6 +1,6 @@
 # About
 <p style="text-align: center">
-<img src="/img/cebolla.png" style="width:250px">
+<img src="../img/cebolla.png" style="width:250px">
 </p>
 
 Proyecto realizado en la **Universidad Simón Bolívar** para la materia *Miniproyecto de Desarrollo de Software* (EP4793) del trimestre **Sep-Dic 2018**.
