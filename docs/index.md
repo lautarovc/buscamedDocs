@@ -38,7 +38,8 @@ con las siguientes instrucciones.
 
 
 * #### Primera Corrida:
-**Nota: Es recomendable usar un virtual environment**
+**Nota: Es recomendable usar un virtual environment**<br>
+**Nota 2: Deberá agregar las variables de sistema: [TWITTER_AUTH](../../buscaMedServer/buscaMedServer/#settingspy) y DB_PASSWORD**
 
 	+ `$`pip install -r requirements.txt
 
