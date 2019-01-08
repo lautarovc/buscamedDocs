@@ -159,6 +159,11 @@
     <a class="" href="../../about/">About</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../../bibliografia/">Bibliografia</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -198,14 +203,14 @@
             <div class="section">
               
                 <h1 id="modulo-stores-views">Módulo: stores-views</h1>
-<p>En este módulo se definen los controladores de las vistas para el módulo de la aplicación web utilizando el módulo <em>viewsets</em> del Django Rest Framework.</p>
+<p>En este módulo se definen los controladores de las vistas para el módulo de la aplicación web utilizando el módulo <a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/base/"><em>views</em></a> de <a href="https://docs.djangoproject.com/en/2.1/">Django</a>.</p>
 <p><strong>Autores</strong></p>
 <ul>
 <li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
 </ul>
 <h2 id="controladores-para-vistas-de-farmacias-adscritas">Controladores para vistas de farmacias adscritas</h2>
 <h4 id="clase-loginview">Clase LoginView:</h4>
-<p>Clase que hereda de LoginView del módulo <em>auth.views</em> de Django. Define el formulario de Django a utilizar para renderizar en el archivo html correspondiente (templates/registration/login.html).</p>
+<p>Clase que hereda de <a href="https://docs.djangoproject.com/en/2.1/topics/auth/default/#django.contrib.auth.views.LoginView">LoginView</a> del módulo <em>auth.views</em> de Django. Define el formulario de Django a utilizar para renderizar en el archivo html correspondiente (templates/registration/login.html).</p>
 <p>En el archivo <em>stores/forms.py</em> se definen las características que se esperan renderizar del formulario de inicio de sesión de la siguiente manera:</p>
 <pre><code>class LoginForm(AuthenticationForm):
     username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control', 'id':'inputEmail', 'placeholder':'Nombre de usuario'}))
@@ -216,7 +221,7 @@
     form_class = LoginForm
 </code></pre>
 <h4 id="clase-storesview">Clase StoresView:</h4>
-<p>Clase que hereda de TemplateView del módulo <em>views.generic</em> de Django. Define las acciones a realizar cuando se accede a la página de lectura de archivo CSV del inventario para farmacias adscritas.</p>
+<p>Clase que hereda de <a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/base/#templateview">TemplateView</a> del módulo <em>views.generic</em> de Django. Define las acciones a realizar cuando se accede a la página de lectura de archivo CSV del inventario para farmacias adscritas.</p>
 <p>La función get se llama cuando se recibe una petición GET, en este caso, cuando no se envía un inventario.<br>
 La función post se llama cuando se recibe una petición POST, en este caso, cuando se envía un inventario.</p>
 <p><em>Nótese</em> que cuando se accede por get, la variable success es renderizada con el valor -1, esto para que no se muestre ningun mensaje al usuario. Cuando se accede por post y el archivo es cargado con éxito, la variable success es renderizada con el valor 1, para mostrar un mensaje de carga exitosa. De la misma manera, si hay un error, se renderizará con valor 0 para mostrar un mensaje de error.</p>
@@ -230,7 +235,7 @@ La función post se llama cuando se recibe una petición POST, en este caso, cua
 </code></pre>
 <h2 id="controlador-de-la-vista-publica-de-busqueda">Controlador de la vista pública de búsqueda</h2>
 <h4 id="clase-homeview">Clase HomeView:</h4>
-<p>Clase que hereda de TemplateView del módulo <em>views.generic</em> de Django. Define las acciones a realizar cuando se accede a la página de inicio y de búsqueda.<br>
+<p>Clase que hereda de <a href="https://docs.djangoproject.com/en/2.1/ref/class-based-views/base/#templateview">TemplateView</a> del módulo <em>views.generic</em> de Django. Define las acciones a realizar cuando se accede a la página de inicio y de búsqueda.<br>
 Hasta ahora, todo el trabajo de la página de inicio se encuentra del lado del cliente, puede conseguir más información en <a href="../../stores/templates/#indexhtml">templates</a>.</p>
 <pre><code>class HomeView(TemplateView):
     def get(self, request):

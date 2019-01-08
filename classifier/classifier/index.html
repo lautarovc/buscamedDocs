@@ -159,6 +159,11 @@
     <a class="" href="../../about/">About</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../../bibliografia/">Bibliografia</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -204,10 +209,10 @@ Esta máquina clasifica tweets en <strong>oferta</strong>, <strong>demanda</stro
 <li>Version 2.1: Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
 </ul>
 <p><strong>Descripción</strong></p>
-<p>Archivo donde se encuentran tres versiones del clasificador, separadas por comentarios (esto para mantener la retro-compatibilidad y para adoptar, sin cambios, varias cosas de la primera versión en las otras). Este clasificador hace uso de Tweepy para acceder al API de Twitter y realizar las búsquedas de medicinas, para luego clasificar los tweets y guardarlos en la BD.</p>
+<p>Archivo donde se encuentran tres versiones del clasificador, separadas por comentarios (esto para mantener la retro-compatibilidad y para adoptar, sin cambios, varias cosas de la primera versión en las otras). Este clasificador hace uso de <a href="http://docs.tweepy.org/en/v3.5.0/">Tweepy</a> para acceder al API de <a href="https://developer.twitter.com/en/docs.html">Twitter</a> y realizar las búsquedas de medicinas, para luego clasificar los tweets y guardarlos en la BD.</p>
 <h3 id="version-10">Versión 1.0</h3>
 <h4 id="clase-tweet">Clase Tweet:</h4>
-<p>Utilizada para facilitar la manipulación de los datos obtenidos del API de Twitter</p>
+<p>Utilizada para facilitar la manipulación de los datos obtenidos del API de <a href="https://developer.twitter.com/en/docs.html">Twitter</a></p>
 <pre><code>class Tweet:   
     def __init__(self, url, text, medicines):
         self.url = url
@@ -219,7 +224,7 @@ Esta máquina clasifica tweets en <strong>oferta</strong>, <strong>demanda</stro
     def get_id(self):
 </code></pre>
 <h4 id="tweepy_auth">tweepy_auth:</h4>
-<p>Devuelve un objeto api de Tweepy que permite realizar las búsquedas a Twitter. 
+<p>Devuelve un objeto api de <a href="http://docs.tweepy.org/en/v3.5.0/">Tweepy</a> que permite realizar las búsquedas a <a href="https://developer.twitter.com/en/docs.html">Twitter</a>. 
 Recibe un diccionario con el siguiente formato:</p>
 <pre><code>keys = [{"consumer_key": "xxxx", "consumer_secret": "xxxx",
          "access_token": "xxxx", "access_secret": "xxxx"}]
@@ -227,26 +232,26 @@ Recibe un diccionario con el siguiente formato:</p>
 def tweepy_auth(keys) -&gt; tweepy.api
 </code></pre>
 <h4 id="clean">clean:</h4>
-<p>Devuelve un objeto Tweet a partir de un tweet crudo obtenido por el API de Twitter.</p>
+<p>Devuelve un objeto Tweet a partir de un tweet crudo obtenido por el API de <a href="https://developer.twitter.com/en/docs.html">Twitter</a>.</p>
 <pre><code>def clean(tweet): -&gt; Tweet
 </code></pre>
 <h4 id="classify">classify:</h4>
-<p>Devuelve un objeto Tweet ya clasificado en <strong>oferta</strong> o <strong>demanda</strong>, a partir de un tweet crudo obtenido por el API de Twitter.</p>
+<p>Devuelve un objeto Tweet ya clasificado en <strong>oferta</strong> o <strong>demanda</strong>, a partir de un tweet crudo obtenido por el API de <a href="https://developer.twitter.com/en/docs.html">Twitter</a>.</p>
 <pre><code>def classify(raw_tweet): -&gt; Tweet
 </code></pre>
 <h4 id="batchclassify">batchClassify:</h4>
-<p>Busca todas las medicinas conocidas (guardadas en la variable <em>medicines_list</em>) en Twitter, clasifica los tweets y los guarda en la BD.</p>
+<p>Busca todas las medicinas conocidas (guardadas en la variable <em>medicines_list</em>) en <a href="https://developer.twitter.com/en/docs.html">Twitter</a>, clasifica los tweets y los guarda en la BD.</p>
 <pre><code>def batchClassify(): -&gt; None
 </code></pre>
 <h3 id="version-20">Versión 2.0</h3>
 <h4 id="listartweets">listarTweets:</h4>
-<p>Busca una lista de medicinas dada en Twitter, clasifica los tweets y los guarda en la BD.</p>
+<p>Busca una lista de medicinas dada en <a href="https://developer.twitter.com/en/docs.html">Twitter</a>, clasifica los tweets y los guarda en la BD.</p>
 <p><em>Opcional:</em> recibe un id de un tweet para buscar solamente tweets más recientes.</p>
 <pre><code>def listarTweets(medicine_list, from_id=None): -&gt; None
 </code></pre>
 <h3 id="version-21">Versión 2.1</h3>
 <h4 id="clase-listarthread">Clase ListarThread:</h4>
-<p>Utilizada para generar hilos que busquen listas de medicinas concurrentemente en Twitter con diferentes API keys.</p>
+<p>Utilizada para generar hilos que busquen listas de medicinas concurrentemente en <a href="https://developer.twitter.com/en/docs.html">Twitter</a> con diferentes API keys.</p>
 <p><strong>ListarThread.run()</strong> es equivalente a <em>listarTweets()</em>.</p>
 <pre><code>class ListarThread(threading.Thread):
     def __init__(self, keys, medicine_list, from_id):

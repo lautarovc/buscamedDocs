@@ -173,6 +173,11 @@
     <a class="" href="../../../about/">About</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../../../bibliografia/">Bibliografia</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -216,7 +221,7 @@
             <div class="section">
               
                 <h1 id="modulo-stores-homesearchjs">Módulo: stores-homeSearch.js</h1>
-<p>En este módulo se encuentran las funciones de JavaScript y jQuery que permiten hacer una búsqueda dinámica en la página de inicio, llamando al servidor <a href="../../../rest/views/">REST</a>.</p>
+<p>En este módulo se encuentran las funciones de JavaScript y <a href="https://api.jquery.com/">jQuery</a> que permiten hacer una búsqueda dinámica en la página de inicio, llamando al servidor <a href="../../../rest/views/">REST</a>.</p>
 <p><strong>Autores</strong></p>
 <ul>
 <li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
@@ -230,19 +235,19 @@
 <pre><code>function toggleWeb() -&gt; HTML: esconde un div
 </code></pre>
 <h4 id="startsearch">startSearch:</h4>
-<p>Hace la búsqueda a partir del valor escrito en <em>#searchBox</em> y llama a las funciones que, con Ajax, buscan y muestran los resultados.</p>
+<p>Hace la búsqueda a partir del valor escrito en <em>#searchBox</em> y llama a las funciones que, con <a href="https://api.jquery.com/category/ajax/">Ajax</a>, buscan y muestran los resultados.</p>
 <pre><code>function startSearch() -&gt; HTML: muestra div de resultados y llama funciones asincronas de busqueda
 </code></pre>
 <h4 id="ajaxbuscamedtweets">ajaxBuscamedTweets:</h4>
-<p>Función que recibe el nombre de una medicina y utiliza el módulo <em>ajax</em> de jQuery para hacer un llamado al <a href="../../../rest/views/#clase-tweetviewset">controlador de búsqueda en Twitter</a> del servidor REST. Con el resultado, llama a la función <a href="#ajaxtwitter">ajaxTwitter</a> para incrustar el tweet con el formato de Twittter.</p>
+<p>Función que recibe el nombre de una medicina y utiliza el módulo <a href="https://api.jquery.com/category/ajax/"><em>ajax</em></a> de jQuery para hacer un llamado al <a href="../../../rest/views/#clase-tweetviewset">controlador de búsqueda en Twitter</a> del servidor REST. Con el resultado, llama a la función <a href="#ajaxtwitter">ajaxTwitter</a> para incrustar el tweet con el formato de <a href="https://developer.twitter.com/en/docs/twitter-for-websites/embedded-tweets/overview.html">Twittter</a>.</p>
 <pre><code>function ajaxBuscamedTweets(med) -&gt; None
 </code></pre>
 <h4 id="ajaxtwitter">ajaxTwitter:</h4>
-<p>Función que recibe el url de un tweet, y utiliza el módulo <em>ajax</em> de jQuery para hacer un llamado al servidor REST de <em>publish.twitter.com</em> y obtener el código html para incrustar el tweet en la caja de tweets.</p>
+<p>Función que recibe el url de un tweet, y utiliza el módulo <a href="https://api.jquery.com/category/ajax/"><em>ajax</em></a> de jQuery para hacer un llamado al servidor REST de <em>publish.twitter.com</em> y obtener el código html para incrustar el tweet en la caja de tweets.</p>
 <pre><code>function ajaxTwitter(tweetUrl) -&gt; HTML: inserta resultado en div de tweets
 </code></pre>
 <h4 id="ajaxbuscamedweb">ajaxBuscamedWeb:</h4>
-<p>Función que recibe el nombre de una medicina y utiliza el módulo <em>ajax</em> de jQuery para hacer un llamado al <a href="../../../rest/views/#clase-webviewset">controlador de búsqueda en web</a> del servidor REST. Con el resultado, llama a la función <a href="#htmlforweb">htmlForWeb</a> para obtener el formato en HTML predeterminado e incrustar el resultado.</p>
+<p>Función que recibe el nombre de una medicina y utiliza el módulo <a href="https://api.jquery.com/category/ajax/"><em>ajax</em></a> de jQuery para hacer un llamado al <a href="../../../rest/views/#clase-webviewset">controlador de búsqueda en web</a> del servidor REST. Con el resultado, llama a la función <a href="#htmlforweb">htmlForWeb</a> para obtener el formato en HTML predeterminado e incrustar el resultado.</p>
 <pre><code>function ajaxBuscamedWeb(med) -&gt; HTML: inserta resultado en div de farmacias
 </code></pre>
 <h4 id="htmlforweb">htmlForWeb:</h4>
@@ -250,7 +255,7 @@
 <pre><code>function htmlForWeb(store) -&gt; String: formato HTML
 </code></pre>
 <h4 id="ajaxbuscamedstores">ajaxBuscamedStores:</h4>
-<p>Función que recibe el nombre de una medicina y utiliza el módulo <em>ajax</em> de jQuery para hacer un llamado al <a href="../../../rest/views/#clase-storesviewset">controlador de búsqueda en farmacias adscritas</a> del servidor REST. Con el resultado, llama a la función <a href="#htmlforstores">htmlForStores</a> para obtener el formato en HTML predeterminado e incrustar el resultado.</p>
+<p>Función que recibe el nombre de una medicina y utiliza el módulo <a href="https://api.jquery.com/category/ajax/"><em>ajax</em></a> de jQuery para hacer un llamado al <a href="../../../rest/views/#clase-storesviewset">controlador de búsqueda en farmacias adscritas</a> del servidor REST. Con el resultado, llama a la función <a href="#htmlforstores">htmlForStores</a> para obtener el formato en HTML predeterminado e incrustar el resultado.</p>
 <pre><code>function ajaxBuscamedStores(med) -&gt; HTML: inserta resultado en div de farmacias
 </code></pre>
 <h4 id="htmlforstores">htmlForStores:</h4>

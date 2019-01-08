@@ -165,6 +165,11 @@
     <a class="" href="../../about/">About</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../../bibliografia/">Bibliografia</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -204,13 +209,13 @@
             <div class="section">
               
                 <h1 id="modulo-stores-serializers">Módulo: stores-serializers</h1>
-<p>En este módulo se encuentran definidos los serializadores para convertir los objetos de la BD de las farmacias adscritas en objetos JSON. Utiliza el módulo <em>serializers</em> del Django Rest Framework.</p>
+<p>En este módulo se encuentran definidos los serializadores para convertir los objetos de la BD de las farmacias adscritas en objetos JSON. Utiliza el módulo <a href="https://www.django-rest-framework.org/api-guide/serializers/"><em>serializers</em></a> del <a href="https://www.django-rest-framework.org/">Django Rest Framework</a>.</p>
 <p><strong>Autores</strong></p>
 <ul>
 <li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
 </ul>
 <h4 id="clase-storeserializer">Clase StoreSerializer:</h4>
-<p>Define la estructura en JSON de una tienda (usuario de Django).<br>
+<p>Define la estructura en JSON de una tienda (<a href="https://docs.djangoproject.com/en/2.1/topics/auth/default/">usuario de Django</a>).<br>
 <strong>Nota:</strong> La dirección de cada tienda esta guardada en la variable <em>last_name</em> del usuario.</p>
 <p><strong>Ejemplo:</strong> {'nombre': User.first_name, 'direccion': User.last_name}.</p>
 <pre><code>class StoreSerializer(serializers.ModelSerializer):

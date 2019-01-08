@@ -163,6 +163,11 @@
     <a class="" href="../../about/">About</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../../bibliografia/">Bibliografia</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -202,7 +207,7 @@
             <div class="section">
               
                 <h1 id="modulo-rest-models">Módulo: rest-models</h1>
-<p>En este módulo se encuentra definida la estructura de la base de datos en un modelo orientado a objetos utilizando el Django ORM original.</p>
+<p>En este módulo se encuentra definida la estructura de la base de datos en un modelo orientado a objetos utilizando el <a href="https://docs.djangoproject.com/en/2.1/">Django</a> ORM original.</p>
 <p><strong>Autores</strong></p>
 <ul>
 <li>Version 1.0: Antonio Cipagauta, 05-38040 | Douglas Torres, 11-11027</li>
@@ -221,7 +226,7 @@
 </code></pre>
 <h4 id="clase-presentacion">Clase Presentacion:</h4>
 <p>Guarda la presentación y registro sanitario asociado a una medicina.</p>
-<p><strong>Versión 2.0:</strong> Tabla sin utilizar por ser innecesaria hasta los momentos. Guardar las presentaciones ocupa más espacio del permitido por las limitaciones gratuitas de Heroku. Definida igualmente para expansión futura.</p>
+<p><strong>Versión 2.0:</strong> Tabla sin utilizar por ser innecesaria hasta los momentos. Guardar las presentaciones ocupa más espacio del permitido por las limitaciones gratuitas de <a href="https://www.heroku.com/">Heroku</a>. Definida igualmente para expansión futura.</p>
 <pre><code>class Presentacion(models.Model):
     presentacion = models.TextField(verbose_name=('Presentacion'))
     registro = models.TextField(verbose_name=('Registro sanitario'))

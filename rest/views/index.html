@@ -161,6 +161,11 @@
     <a class="" href="../../about/">About</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../../bibliografia/">Bibliografia</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -200,7 +205,7 @@
             <div class="section">
               
                 <h1 id="modulo-rest-views">Módulo: rest-views</h1>
-<p>En este módulo se definen los controladores de las vistas de acceso al módulo REST utilizando el módulo <em>viewsets</em> del Django Rest Framework.</p>
+<p>En este módulo se definen los controladores de las vistas de acceso al módulo REST utilizando el módulo <a href="https://www.django-rest-framework.org/api-guide/viewsets/"><em>viewsets</em></a> del <a href="https://www.django-rest-framework.org/">Django Rest Framework</a>.</p>
 <p><strong>Autores</strong></p>
 <ul>
 <li>Version 1.0: Antonio Cipagauta, 05-38040 | Douglas Torres, 11-11027</li>
@@ -249,7 +254,7 @@ Función que busca el componente activo de un medicamento en los inventarios de 
 <h2 id="controladores-de-las-vistas">Controladores de las Vistas</h2>
 <h4 id="clase-tweetviewset">Clase TweetViewSet:</h4>
 <p><strong>Versión 2.0</strong><br>
-Clase que hereda de viewsets.ReadOnlyModelViewSet del módulo <em>viewsets</em> del Django Rest Framework. Define la tabla de la BD que mostrará y el serializador que convertira las filas de la tabla en JSON.<br>
+Clase que hereda de viewsets.ReadOnlyModelViewSet del módulo <a href="https://www.django-rest-framework.org/api-guide/viewsets/"><em>viewsets</em></a> del Django Rest Framework. Define la tabla de la BD que mostrará y el serializador que convertira las filas de la tabla en JSON.<br>
 La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la función buscaTwitter y el serializador <a href="../../rest/serializers/#clase-tweetserializer">TweetSerializer</a>.</p>
 <pre><code>class TweetViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Tweet.objects.all()
@@ -261,7 +266,7 @@ La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la funci
 </code></pre>
 <h4 id="clase-storesviewset">Clase StoresViewSet:</h4>
 <p><strong>Versión 2.0</strong><br>
-Clase que hereda de viewsets.ReadOnlyModelViewSet del módulo <em>viewsets</em> del Django Rest Framework. Define la tabla de la BD que mostrará y el serializador que convertira las filas de la tabla en JSON.<br>
+Clase que hereda de viewsets.ReadOnlyModelViewSet del módulo <a href="https://www.django-rest-framework.org/api-guide/viewsets/"><em>viewsets</em></a> del Django Rest Framework. Define la tabla de la BD que mostrará y el serializador que convertira las filas de la tabla en JSON.<br>
 La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la función <a href="#retrieveinventory">retrieveInventory</a> y el serializador <a href="../../stores/serializers/#clase-inventoryserializer">InventorySerializer</a>.</p>
 <pre><code>class StoresViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = store.ProductosPorTienda.objects.all()
@@ -273,7 +278,7 @@ La función <em>list()</em> define la respuesta JSON a mostrar. Utiliza la funci
 </code></pre>
 <h4 id="clase-webviewset">Clase WebViewSet:</h4>
 <p><strong>Versión 2.0</strong><br>
-Clase que hereda de viewsets.ViewSet del módulo <em>viewsets</em> del Django Rest Framework. No necesita definir una tabla en la BD ni un seralizador, porque las herramientas del módulo <a href="../../webcrawler/webcrawler/">WebCrawler</a> ya devuelven un objeto compatible con JSON.<br>
+Clase que hereda de viewsets.ViewSet del módulo <a href="https://www.django-rest-framework.org/api-guide/viewsets/"><em>viewsets</em></a> del Django Rest Framework. No necesita definir una tabla en la BD ni un seralizador, porque las herramientas del módulo <a href="../../webcrawler/webcrawler/">WebCrawler</a> ya devuelven un objeto compatible con JSON.<br>
 La función <em>list()</em> realiza las búsquedas, las concatena y las devuelve en la respuesta.</p>
 <pre><code>class WebViewSet(viewsets.ViewSet):
     def list(self, request):

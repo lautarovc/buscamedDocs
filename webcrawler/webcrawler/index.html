@@ -161,6 +161,11 @@
     <a class="" href="../../about/">About</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../../bibliografia/">Bibliografia</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -196,21 +201,21 @@
             <div class="section">
               
                 <h1 id="modulo-webcrawler">Módulo: webcrawler</h1>
-<p>En este módulo se encuentran los webcrawlers que buscan la información de inventario directamente en las páginas web de diferentes farmacias. Utilizan el módulo <em>requests</em> para hacer las peticiones a las páginas y <em>BeautifulSoup</em> para analizar las respuestas HTML en Python.</p>
+<p>En este módulo se encuentran los webcrawlers que buscan la información de inventario directamente en las páginas web de diferentes farmacias. Utilizan el módulo <a href="http://docs.python-requests.org/en/master/"><em>requests</em></a> para hacer las peticiones a las páginas y <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><em>BeautifulSoup</em></a> para analizar las respuestas HTML en Python.</p>
 <h2 id="webcrawlerfarmarketpy">webCrawlerFarmarket.py</h2>
 <p><strong>Autores</strong></p>
 <ul>
 <li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
 </ul>
 <p><strong>Descripción</strong></p>
-<p>Archivo donde se encuentran las funciones que permiten las búsquedas en la página de <strong>Farmarket</strong>.<br>
+<p>Archivo donde se encuentran las funciones que permiten las búsquedas en la página de <a href="https://www.farmarket.com.ve/"><strong>Farmarket</strong></a>.<br>
 Contiene un <em>Main</em> para realizar pruebas directamente.</p>
 <h4 id="webcrawler">webCrawler:</h4>
-<p>Función que hace una petición POST (con timeout=30seg) a la página de <em>Farmarket</em> con la variable 'txtProducto' asignada al valor de la medicina. Luego, la respuesta es analizada por <em>Beautiful Soup</em> y la información de los productos es recolectada por la función <em>collectInfo</em>. </p>
+<p>Función que hace una petición POST (con timeout=30seg) a la página de <em>Farmarket</em> con la variable 'txtProducto' asignada al valor de la medicina. Luego, la respuesta es analizada por <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><em>BeautifulSoup</em></a> y la información de los productos es recolectada por la función <em>collectInfo</em>. </p>
 <pre><code>def webCrawler(medicine): -&gt; List&lt;ProductosPorTienda&gt;
 </code></pre>
 <h4 id="collectinfo">collectInfo:</h4>
-<p>Recibe una lista de los tds (table data) del HTML, obtenida por <em>BeautifulSoup</em>, y de forma personalizada a la estructura de la página de <em>Farmarket</em>, recolecta la información de los productos por tienda en una lista.</p>
+<p>Recibe una lista de los tds (table data) del HTML, obtenida por <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><em>BeautifulSoup</em></a>, y de forma personalizada a la estructura de la página de <em>Farmarket</em>, recolecta la información de los productos por tienda en una lista.</p>
 <pre><code>def collectInfo(tds): -&gt; List&lt;ProductosPorTienda&gt;
 </code></pre>
 <h2 id="webcrawlerfullfarmaciapy">webCrawlerFullFarmacia.py</h2>
@@ -219,14 +224,14 @@ Contiene un <em>Main</em> para realizar pruebas directamente.</p>
 <li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
 </ul>
 <p><strong>Descripción</strong></p>
-<p>Archivo donde se encuentran las funciones que permiten las búsquedas en la página de <strong>FullFarmacia</strong>.<br>
+<p>Archivo donde se encuentran las funciones que permiten las búsquedas en la página de <a href="http://fullfarmacia.com/"><strong>FullFarmacia</strong></a>.<br>
 Contiene un <em>Main</em> para realizar pruebas directamente.</p>
 <h4 id="webcrawler_1">webCrawler:</h4>
-<p>Función que hace una petición GET (con timeout=30seg) a la página de <em>FullFarmacia</em> con la variable 'searchBox' asignada al valor de la medicina. Luego, la respuesta es analizada por <em>Beautiful Soup</em> y la información de los productos es recolectada por la función <em>collectInfo</em>. </p>
+<p>Función que hace una petición GET (con timeout=30seg) a la página de <em>FullFarmacia</em> con la variable 'searchBox' asignada al valor de la medicina. Luego, la respuesta es analizada por <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><em>BeautifulSoup</em></a> y la información de los productos es recolectada por la función <em>collectInfo</em>. </p>
 <pre><code>def webCrawler(medicine): -&gt; List&lt;ProductosPorTienda&gt;
 </code></pre>
 <h4 id="collectinfo_1">collectInfo:</h4>
-<p>Recibe una lista de los tds (table data) dentro de 'productContainer' del HTML, obtenida por <em>BeautifulSoup</em>, y de forma personalizada a la estructura de la página de <em>FullFarmacia</em>, recolecta la información de los productos por tienda en una lista.</p>
+<p>Recibe una lista de los tds (table data) dentro de 'productContainer' del HTML, obtenida por <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><em>BeautifulSoup</em></a>, y de forma personalizada a la estructura de la página de <em>FullFarmacia</em>, recolecta la información de los productos por tienda en una lista.</p>
 <pre><code>def collectInfo(tds): -&gt; List&lt;ProductosPorTienda&gt;
 </code></pre>
 <h2 id="webcrawlerfundafarmaciapy">webCrawlerFundafarmacia.py</h2>
@@ -235,14 +240,14 @@ Contiene un <em>Main</em> para realizar pruebas directamente.</p>
 <li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
 </ul>
 <p><strong>Descripción</strong></p>
-<p>Archivo donde se encuentran las funciones que permiten las búsquedas en la página de <strong>Fundafarmacia</strong>.<br>
+<p>Archivo donde se encuentran las funciones que permiten las búsquedas en la página de <a href="http://www.fundafarmacia.com/"><strong>Fundafarmacia</strong></a>.<br>
 Contiene un <em>Main</em> para realizar pruebas directamente.</p>
 <h4 id="webcrawler_2">webCrawler:</h4>
-<p>Función que hace una petición POST (con timeout=30seg) a la página de <em>Fundafarmacia</em> con la variable 'producto' asignada al valor de la medicina. Luego, la respuesta es analizada por <em>Beautiful Soup</em> y la información de los productos es recolectada por la función <em>collectInfo</em>. </p>
+<p>Función que hace una petición POST (con timeout=30seg) a la página de <em>Fundafarmacia</em> con la variable 'producto' asignada al valor de la medicina. Luego, la respuesta es analizada por <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><em>BeautifulSoup</em></a> y la información de los productos es recolectada por la función <em>collectInfo</em>. </p>
 <pre><code>def webCrawler(medicine): -&gt; List&lt;ProductosPorTienda&gt;
 </code></pre>
 <h4 id="collectinfo_2">collectInfo:</h4>
-<p>Recibe una lista de los tds (table data) del HTML, obtenida por <em>BeautifulSoup</em>, y de forma personalizada a la estructura de la página de <em>Fundafarmacia</em>, recolecta la información de los productos por tienda en una lista.</p>
+<p>Recibe una lista de los tds (table data) del HTML, obtenida por <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/"><em>BeautifulSoup</em></a>, y de forma personalizada a la estructura de la página de <em>Fundafarmacia</em>, recolecta la información de los productos por tienda en una lista.</p>
 <pre><code>def collectInfo(tds): -&gt; List&lt;ProductosPorTienda&gt;
 </code></pre>
               

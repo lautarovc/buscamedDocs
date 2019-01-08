@@ -159,6 +159,11 @@
     <a class="" href="../../about/">About</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../../bibliografia/">Bibliografia</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -198,13 +203,13 @@
             <div class="section">
               
                 <h1 id="modulo-rest-urls">Módulo: rest-urls</h1>
-<p>En este módulo se encuentran definidas las URL para el acceso al módulo REST. Para esto se utiliza el módulo <em>routers</em> del Django Rest Framework.</p>
+<p>En este módulo se encuentran definidas las URL para el acceso al módulo REST. Para esto se utiliza el módulo <a href="https://www.django-rest-framework.org/api-guide/routers/"><em>routers</em></a> del <a href="https://www.django-rest-framework.org/">Django Rest Framework</a>.</p>
 <p><strong>Autores</strong></p>
 <ul>
 <li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
 </ul>
 <h4 id="router">router:</h4>
-<p>Variable donde se registran las vistas del módulo <em>rest-views</em>. Esta variable es un objeto <em>DefaultRouter</em> del Django Rest Framework.</p>
+<p>Variable donde se registran las vistas del módulo <a href="../views"><em>rest-views</em></a>. Esta variable es un objeto <a href="https://www.django-rest-framework.org/api-guide/routers/#defaultrouter"><em>DefaultRouter</em></a> del <a href="https://www.django-rest-framework.org/">Django Rest Framework</a>.</p>
 <pre><code>router = routers.DefaultRouter()
 router.register(r'tweets', views.TweetViewSet)
 router.register(r'stores', views.StoresViewSet)

@@ -163,6 +163,11 @@
     <a class="" href="../../about/">About</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../../bibliografia/">Bibliografia</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -202,7 +207,7 @@
             <div class="section">
               
                 <h1 id="modulo-rest-commands">Módulo: rest-commands</h1>
-<p>En este módulo, ubicado en rest/management/commands, se encuentran los comandos personalizados de Django para gestionar los datos del servidor REST. 
+<p>En este módulo, ubicado en rest/management/commands, se encuentran los comandos personalizados de <a href="https://docs.djangoproject.com/en/2.1/">Django</a> para gestionar los datos del servidor REST. 
 Estos comandos pueden ser programados para gestionar automáticamente el servidor.</p>
 <h2 id="batchclassificationpy">batchClassification.py</h2>
 <p><strong>Autores</strong></p>
@@ -210,7 +215,7 @@ Estos comandos pueden ser programados para gestionar automáticamente el servido
 <li>Antonio Cipagauta, 05-38040 | Douglas Torres, 11-11027</li>
 </ul>
 <p><strong>Descripción</strong></p>
-<p>Comando que llama a la función del módulo classifier que busca todas las medicinas conocidas (guardadas en la variable <em>medicines_list</em>) en Twitter, clasifica los tweets y los guarda en la BD.</p>
+<p>Comando que llama a la función del módulo <a href="../../classifier/classifier">classifier</a> que busca todas las medicinas conocidas (guardadas en la variable <em>medicines_list</em>) en <a href="https://developer.twitter.com/en/docs.html">Twitter</a>, clasifica los tweets y los guarda en la BD.</p>
 <h4 id="uso">Uso:</h4>
 <pre><code>python manage.py batchClassification
 </code></pre>
@@ -230,7 +235,7 @@ Estos comandos pueden ser programados para gestionar automáticamente el servido
 <li>Lautaro Villalón, 12-10427 | Yarima Luciani, 13-10770</li>
 </ul>
 <p><strong>Descripción</strong></p>
-<p>Comando que elimina los tweets que han llegado a su fecha de vencimiento. La variable del módulo de configuración "TWEET_EXPIRATION" define cuantos días tarda un tweet en expirar.</p>
+<p>Comando que elimina los tweets que han llegado a su fecha de vencimiento. La variable del módulo de configuración <a href="../../buscaMedServer/buscaMedServer/#settingspy">"TWEET_EXPIRATION"</a> define cuantos días tarda un tweet en expirar.</p>
 <h4 id="uso_2">Uso:</h4>
 <pre><code>python manage.py expireTweets
 </code></pre>

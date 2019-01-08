@@ -2,92 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/buscaMedServer/buscaMedServer/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/classifier/classifier/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/rest/commands/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/rest/models/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/rest/serializers/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/rest/urls/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/rest/views/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/stores/commands/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/stores/models/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/stores/serializers/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/stores/templates/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/stores/urls/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/stores/views/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/stores/js/homeSearch/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/stores/js/readFile/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/webcrawler/webcrawler/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://lautarovc.github.io/buscamedDocs/about/</loc>
-     <lastmod>2019-01-06</lastmod>
+     <lastmod>2019-01-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://lautarovc.github.io/buscamedDocs/bibliografia/</loc>
+     <lastmod>2019-01-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
